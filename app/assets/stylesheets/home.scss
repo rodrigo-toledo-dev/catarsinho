@@ -43,4 +43,45 @@ body {
             font-size: 2em;
         }
     }
+    .projects_list {
+        .projects {
+            margin-top: 48px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            a {
+                color: #363636;
+            }
+            .description {
+                .title {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                .value_to_get {
+                    font-size: 16px;
+                    color: #363636;
+                }
+            }
+            .project {
+                text-align: center;
+                font-size: 16px;
+                color: #746A6A;
+                .image_placeholder {
+                    width: 262px;
+                    height: 230px;
+                    background-color: #EEEEEE;
+                    border-radius: 3px;
+                    align-content: center;
+                    justify-content: center;
+                    display: flex;
+                    margin-bottom: 11px;
+                    img {
+                        width: 180px;
+                        height: 180px;
+                        align-self: center
+                    }
+                }
+            }
+        }
+    }
 }
