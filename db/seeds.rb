@@ -1,3 +1,4 @@
+Project.destroy_all
 User.destroy_all
 users = [
   {email: 'rodrigo@rtoledo.inf.br', password: 'asdqwe123', password_confirmation: 'asdqwe123'},
