@@ -75,3 +75,4 @@ gem 'faker'
 gem 'rails-controller-testing'
 gem "aws-sdk-s3", require: false
 gem "font-awesome-rails"
+gem 'devise'

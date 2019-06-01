@@ -1,0 +1,27 @@
+.visitor_actions {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    width: 534px;
+    font-size: 12px;
+    .visitor_actions form,
+    a {
+        color: #363636;
+    }
+    a.edit_registration {
+        width: 90%;
+        text-align: right;
+    }
+    input {
+        border: 1px solid #686868;
+        border-radius: 4px;
+        padding: 5px;
+        min-width: 130px;
+    }
+    input[type="submit"] {
+        min-width: 66px;
+        background-color: cadetblue;
+    }
+}

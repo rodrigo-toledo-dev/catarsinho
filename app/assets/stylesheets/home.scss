@@ -24,8 +24,9 @@ body {
         flex-direction: column;
         text-align: center;
         .logo {
-            width: 10em;
-            height: 10em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
             align-items: center;
             justify-content: center;
             align-self: center;
