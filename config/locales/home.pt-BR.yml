@@ -3,4 +3,5 @@ pt-BR:
   home:
     project:
       value_to_get: Valor a arrecadar
-      project_details: Detalhes do projeto
+      value_missing: Ainda falta(am)!
+      project_details: Quero ajudar este projeto

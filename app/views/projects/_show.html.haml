@@ -1,0 +1,15 @@
+
+.project
+  .image_placeholder=image_tag url_for(@project.image)
+  .description
+    .title
+      = @project.title
+    .user
+      =t('.email')
+      = @project.user.email
+    .value_to_get
+      =t('.value_to_get')
+      = number_to_currency @project.value_to_get
+    .value_missing
+      =t('.value_missing')
+      = number_to_currency @project.value_missing
