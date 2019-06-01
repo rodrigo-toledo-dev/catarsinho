@@ -1,0 +1,9 @@
+.project
+  .image_placeholder=image_tag url_for(project.image)
+  .description
+    .title
+      = project.title
+    .value_to_get
+      =t('.value_to_get')
+      = number_to_currency project.value_to_get
+  =link_to t('.project_details'), project, remote: true, class: 'project_details'
