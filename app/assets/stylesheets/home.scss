@@ -7,18 +7,12 @@
 body {
     margin: 0;
     padding: 0;
-    padding-top: 55px;
-    padding-right: 71px;
-    padding-left: 71px;
-    padding-bottom: 30px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    background: rgb(67.1%, 78.8%, 78.8%);
-    border-radius: 20px;
-    padding: 20px;
+    margin: 20px 80px;
     .header {
         display: flex;
         flex-direction: column;
@@ -41,47 +35,6 @@ body {
         }
         .description {
             font-size: 2em;
-        }
-    }
-    .projects_list {
-        .projects {
-            margin-top: 48px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            a {
-                color: #363636;
-            }
-            .description {
-                .title {
-                    font-size: 16px;
-                    font-weight: bold;
-                }
-                .value_to_get {
-                    font-size: 16px;
-                    color: #363636;
-                }
-            }
-            .project {
-                text-align: center;
-                font-size: 16px;
-                color: #746A6A;
-                .image_placeholder {
-                    width: 262px;
-                    height: 230px;
-                    background-color: #EEEEEE;
-                    border-radius: 3px;
-                    align-content: center;
-                    justify-content: center;
-                    display: flex;
-                    margin-bottom: 11px;
-                    img {
-                        width: 180px;
-                        height: 180px;
-                        align-self: center
-                    }
-                }
-            }
         }
     }
 }

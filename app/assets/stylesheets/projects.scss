@@ -1,0 +1,84 @@
+#project_detail {
+    display: none;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 3px solid #746A6A;
+    border-radius: 10px;
+    .project {
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .title {
+            font-size: 20px;
+            font-weight: bold
+        }
+        .project_description {
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .image_placeholder {
+            text-align: center;
+            width: 20%;
+        }
+        .description {
+            width: 40%;
+        }
+        .contribution {
+            width: 40%;
+            form {
+                input,
+                .commit {
+                    height: 24px;
+                    width: 90%;
+                }
+                input {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+
+.projects_list {
+    .projects {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        a {
+            color: #363636;
+        }
+        .description {
+            font-size: 16px;
+            color: #746A6A;
+            .title,
+            .value_missing {
+                font-weight: bold;
+                color: #333333;
+            }
+        }
+        .project {
+            text-align: center;
+            font-size: 14px;
+            color: #746A6A;
+            .image_placeholder {
+                width: 262px;
+                height: 230px;
+                background-color: #EEEEEE;
+                border-radius: 3px;
+                align-content: center;
+                justify-content: center;
+                display: flex;
+                margin-bottom: 11px;
+                img {
+                    width: 180px;
+                    height: 180px;
+                    align-self: center
+                }
+            }
+        }
+    }
+}
