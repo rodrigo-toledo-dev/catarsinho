@@ -4,12 +4,19 @@
   .description
     .title
       = @project.title
+    .project_description
+      = @project.description
     .user
-      =t('.email')
-      = @project.user.email
+      =[t('.email'), @project.user.email].join(': ')
     .value_to_get
-      =t('.value_to_get')
-      = number_to_currency @project.value_to_get
+      =[t('.value_to_get'), number_to_currency(@project.value_to_get)].join(': ')
     .value_missing
-      =t('.value_missing')
-      = number_to_currency @project.value_missing
+      =[t('.value_missing'), number_to_currency(@project.value_missing)].join(': ')
+  .contribution
+    .title=t('.contribution_title')
+    =form_for @project_item, url: new_project_project_item_path(@project) do |f|
+      =f.text_field :name
+      =f.text_field :email
+      =f.text_field :value_to_pass
+      = f.submit t('.button')
+
