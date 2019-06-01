@@ -74,4 +74,4 @@ gem 'factory_bot_rails'
 gem 'faker'
 gem 'rails-controller-testing'
 gem "aws-sdk-s3", require: false
-gem "bulma-rails", "~> 0.7.5"
+gem "font-awesome-rails"
