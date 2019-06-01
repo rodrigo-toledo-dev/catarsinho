@@ -15,6 +15,31 @@ body {
 
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    background: rgb(67.1%, 78.8%, 78.8%);
+    border-radius: 20px;
+    padding: 20px;
+    .header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .logo {
+            width: 10em;
+            height: 10em;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            overflow: hidden;
+            span {
+                font-size: 10em;
+            }
+        }
+        .description,
+        .logo span {
+            color: #363636;
+        }
+        .description {
+            font-size: 2em;
+        }
+    }
 }

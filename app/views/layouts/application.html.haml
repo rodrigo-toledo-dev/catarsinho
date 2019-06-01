@@ -9,5 +9,9 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .container=yield
-    
+    .container
+      .header
+        .logo=content_tag(:span, '', class: 'fa fa-life-ring')
+        .description="#{t('application_name')} - #{t('application_description')}"
+      =yield
+

@@ -1,5 +1,8 @@
 {
   "name": "catarsinho",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2"
+  }
 }
