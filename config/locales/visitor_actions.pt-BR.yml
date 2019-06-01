@@ -1,0 +1,11 @@
+---
+pt-BR:
+  visitor_actions:
+    actions:
+      placeholder_email: Email
+      placeholder_password: Senha
+      or: ou
+      button: Acessar sua conta
+      sign_up: Faça seu cadastro
+      registrations: Edite sua conta
+      destroy_session: Sair!

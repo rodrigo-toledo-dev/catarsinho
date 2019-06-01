@@ -11,7 +11,9 @@
   %body
     .container
       .header
-        .logo=content_tag(:span, '', class: 'fa fa-life-ring')
-        .description="#{t('application_name')} - #{t('application_description')}"
+        .visitor_actions=render(partial: 'visitor_actions/actions')
+        .logo
+          =content_tag(:span, '', class: 'fa fa-life-ring')
+          .description="#{t('application_name')} - #{t('application_description')}"
       =yield
 
