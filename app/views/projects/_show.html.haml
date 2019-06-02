@@ -17,6 +17,6 @@
     =form_for :project_item, url: project_project_items_path(@project), remote: true do |f|
       =f.text_field :name, placeholder: ProjectItem.human_attribute_name(:name), value: ''
       =f.text_field :email, placeholder: ProjectItem.human_attribute_name(:email), value: ''
-      =f.text_field :value_to_pass, placeholder: ProjectItem.human_attribute_name(:value_to_pass), value: ''
+      =f.number_field :value_to_pass, placeholder: ProjectItem.human_attribute_name(:value_to_pass), value: ''
       = f.submit t('.contribute_to')
 
