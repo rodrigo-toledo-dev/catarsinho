@@ -1,0 +1,9 @@
+<% if @project_item.valid? %>
+  alert('Valor arrecadado com sucesso');
+  $('#project_detail').html("<%= j render(partial: 'projects/show') %>");
+  var projectDetail = document.documentElement;
+  projectDetail.scrollIntoView();
+  $("div.project-<%=@project_item.project.slug%>").html("<%= j render partial: 'home/project', locals: {project: @project_item.project} %>")
+<% else %>
+  alert('ops... falta algo no formulário?!')
+<% end %>

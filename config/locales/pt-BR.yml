@@ -1,27 +1,5 @@
 ---
 pt-BR:
-  activerecord:
-    models:
-      user: 'Usuários'
-      project: 'Projetos'
-      project_item: 'Itens arrecadados'
-    attributes:
-      project:
-        title: 'Título'
-        description: 'Descrição'
-        value_to_get: 'Valor a ser arrecadado'
-        image: 'Imagem'
-      project_item:
-        project: 'Projeto'
-        value_to_pass: 'Valor arrecadado'
-        email: 'E-mail'
-        name: 'Nome'
-    errors:
-      messages:
-        record_invalid: 'A validação falhou: %{errors}'
-        restrict_dependent_destroy:
-          has_one: Não é possível excluir o registro pois existe um %{record} dependente
-          has_many: Não é possível excluir o registro pois existem %{record} dependentes
   date:
     abbr_day_names:
     - Dom
