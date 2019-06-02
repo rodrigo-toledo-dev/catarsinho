@@ -21,6 +21,10 @@ pt-BR:
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
+        missing_project: Projeto deve ser selecionado
+        more_than_needs: está arrecadando a mais...
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
+  project_item_valid: 'Valor arrecadado com sucesso'
+  project_item_invalid: 'ops... falta algo no formulário?!'

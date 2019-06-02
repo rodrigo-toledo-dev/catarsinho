@@ -1,9 +1,11 @@
 <% if @project_item.valid? %>
-  alert('Valor arrecadado com sucesso');
+  alert("<%= t('project_item_valid') %>");
   $('#project_detail').html("<%= j render(partial: 'projects/show') %>");
+  var currentProjectId = "div.project-<%=@project_item.project.slug%>";
+  $(currentProjectId).html("<%= j render partial: 'home/project', locals: {project: @project_item.project} %>")
   var projectDetail = document.documentElement;
   projectDetail.scrollIntoView();
-  $("div.project-<%=@project_item.project.slug%>").html("<%= j render partial: 'home/project', locals: {project: @project_item.project} %>")
+
 <% else %>
-  alert('ops... falta algo no formulário?!')
+  alert("<%= t('project_item_invalid') %>");
 <% end %>
