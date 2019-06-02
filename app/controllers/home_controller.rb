@@ -5,6 +5,6 @@ class HomeController < ApplicationController
 
   protected
     def set_projects
-      @projects = Project.order(params[:order] || :title)
+      @projects = Project.order(value_to_get: :desc)
     end
 end
