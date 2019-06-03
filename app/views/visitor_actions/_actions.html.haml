@@ -1,11 +1,19 @@
 -unless user_signed_in?
-  = form_for(resource, as: resource_name, url: session_path(resource_name), html: {autocomplete: :off}) do |f|
-    = f.email_field :email, placeholder: t('.placeholder_email')
-    = f.password_field :password, placeholder: t('.placeholder_password')
-    = f.submit t('.button')
-  =t('.or')
-  =link_to(t('.sign_up'), new_user_registration_path)
+  .visitor_actions_not_logged
+    =link_to(t('.go_home'), root_path, class: 'go_home')
+    =' | '
+    = form_for(resource, as: resource_name, url: session_path(resource_name), html: {autocomplete: :off}) do |f|
+      = f.email_field :email, placeholder: t('.placeholder_email')
+      = f.password_field :password, placeholder: t('.placeholder_password')
+      = f.submit t('.button')
+    =t('.or')
+    =link_to(t('.sign_up'), new_user_registration_path)
 -else
-  =link_to(t('.registrations'), edit_user_registration_path, class: 'edit_registration')
-  =t('.or')
-  =link_to(t('.destroy_session'), destroy_user_session_path, class: 'destroy_session', method: :delete)
+  .visitor_actions
+    =link_to(t('.go_home'), root_path, class: 'go_home')
+    =' | '
+    =link_to(t('.new_project'), new_project_path, class: 'new_project', remote: true)
+    =' | '
+    =link_to(t('.registrations'), edit_user_registration_path, class: 'edit_registration')
+    =t('.or')
+    =link_to(t('.destroy_session'), destroy_user_session_path, class: 'destroy_session', method: :delete)

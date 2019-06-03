@@ -1,0 +1,22 @@
+.project
+  .image_placeholder=content_tag(:span, '', class: 'fa fa-tasks fa_placeholder', style: 'font-size: 10em')
+  .description
+    .title
+      = t('.title')
+    .image
+      = t('.image')
+    .project_description
+      = t('.description')
+    .user
+      = t('.user')
+    .value_to_get
+      = t('.value_to_get')
+  .contribution
+    .title=t('.new_project_title')
+    =form_for @project, url: projects_path do |f|
+      =f.text_field :title, placeholder: Project.human_attribute_name(:title), value: '', required: true
+      =f.file_field :image, placeholder: Project.human_attribute_name(:image), required: true
+      =f.text_area :description, placeholder: Project.human_attribute_name(:description), value: '', required: true
+      =f.number_field :value_to_get, placeholder: Project.human_attribute_name(:value_to_get), value: '', required: true
+      = f.submit t('.save_project')
+

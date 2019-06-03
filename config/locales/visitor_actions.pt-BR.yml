@@ -2,6 +2,8 @@
 pt-BR:
   visitor_actions:
     actions:
+      go_home: Início
+      new_project: Novo projeto
       placeholder_email: Email
       placeholder_password: Senha
       or: ou

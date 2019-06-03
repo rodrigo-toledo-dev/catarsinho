@@ -13,3 +13,12 @@ pt-BR:
       project_details: Quero ajudar este projeto
       contribution_title: Vou contribuir com!
       contribute_to: 'Enviar contribuição :)'
+    new:
+      new_project_title: 'Detalhes do projeto'
+      title: 'Título: é o destaque do projeto'
+      image: 'Imagem: com certeza vai fazer toda a diferença'
+      description: 'Descrição: a descrição do projeto ajuda a todos entenderem o porquê dele existir'
+      user: 'Responsável: você é o responsável por este projeto existir, parabéns!'
+      value_to_get: 'Valor a arrecadar: pense no quanto você ajudaria para este projeto ir pra frente'
+      save_project: Criar projeto
+

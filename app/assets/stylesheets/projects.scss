@@ -30,10 +30,16 @@
             width: 40%;
             form {
                 input,
+                textarea,
                 .commit {
-                    height: 24px;
                     width: 90%;
                 }
+                ;
+                input,
+                .commit {
+                    height: 24px;
+                }
+                ;
                 input {
                     margin-bottom: 16px;
                 }
@@ -77,6 +83,9 @@
                     width: 180px;
                     height: 180px;
                     align-self: center
+                }
+                .fa_placeholder {
+                    font-size: 10em !important;
                 }
             }
         }
