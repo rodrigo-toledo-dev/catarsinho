@@ -1,11 +1,6 @@
-<% if @project_item.valid? %>
-  alert("<%= t('project_item_valid') %>");
-  $('#project_detail').html("<%= j render(partial: 'projects/show') %>");
-  var currentProjectId = "div.project-<%=@project_item.project.slug%>";
-  $(currentProjectId).html("<%= j render partial: 'home/project', locals: {project: @project_item.project} %>")
-  var projectDetail = document.documentElement;
-  projectDetail.scrollIntoView();
-
-<% else %>
-  alert("<%= t('project_item_invalid') %>");
-<% end %>
+alert("<%= t('project_item_valid') %>");
+$('#project_detail').html("<%= j render(partial: 'projects/show') %>");
+var currentProjectId = "div.project-<%=@project_item.project.slug%>";
+$(currentProjectId).html("<%= j render partial: 'home/project', locals: {project: @project_item.project} %>")
+var projectDetail = document.documentElement;
+projectDetail.scrollIntoView();

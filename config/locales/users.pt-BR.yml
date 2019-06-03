@@ -1,0 +1,10 @@
+---
+pt-BR:
+  projects:
+    show:
+      email: Email
+      value_to_get: Valor a arrecadar
+      value_missing: Ainda falta(am)!
+      project_details: Quero ajudar este projeto
+      contribution_title: Vou contribuir com!
+      contribute_to: 'Enviar contribuição :)'

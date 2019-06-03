@@ -2,10 +2,12 @@ class ProjectItemsController < ApplicationController
   def create
     @project = Project.friendly.find(params[:project_id])
     @project_item = @project.project_items.build(project_item_params)
-    @project_item.save
-    logger.info @project_item.errors.inspect
     respond_to do |format|
-      format.js
+      if @project_item.save
+        format.js { render 'create' }
+      else
+        format.js { render 'error' }
+      end
     end
   end
 

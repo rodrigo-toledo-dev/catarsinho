@@ -6,10 +6,9 @@ class PriceValidator < ActiveModel::EachValidator
       return
     end
 
-    if (record.project.value_missing - value) < 0
+    if (record.project.value_missing - value.to_f) < 0
       record.errors[attribute] << I18n.t('activerecord.errors.messages.more_than_needs')
       return
     end
-    return true
   end
 end

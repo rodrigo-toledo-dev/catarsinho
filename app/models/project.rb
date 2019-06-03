@@ -4,6 +4,9 @@ class Project < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   has_many :project_items
+  validates :title, :image, :description, :value_to_get, presence: true
+
+
 
   def value_missing
     begin

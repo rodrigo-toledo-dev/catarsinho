@@ -4,19 +4,32 @@
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
-    width: 534px;
+    width: 300px;
     font-size: 12px;
     .visitor_actions form,
     a {
         color: #363636;
-    }
-    a.edit_registration {
-        width: 90%;
         text-align: right;
     }
 }
 
-input {
+.visitor_actions_not_logged {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    width: 590px;
+    font-size: 12px;
+    .visitor_actions form,
+    a {
+        color: #363636;
+        text-align: right;
+    }
+}
+
+input,
+textarea {
     border: 1px solid #686868;
     border-radius: 4px;
     padding: 5px;

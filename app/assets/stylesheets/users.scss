@@ -1,0 +1,58 @@
+form.users_forms {
+    margin: 20px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    input {
+        border: 1px solid #686868;
+        border-radius: 4px;
+        padding: 5px;
+        min-width: 330px;
+    }
+    input[type="submit"] {
+        min-width: 330px;
+        background-color: #EEEEEE;
+    }
+}
+
+.projects_list {
+    .projects {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        a {
+            color: #363636;
+        }
+        .description {
+            font-size: 16px;
+            color: #746A6A;
+            .title,
+            .value_missing {
+                font-weight: bold;
+                color: #333333;
+            }
+        }
+        .project {
+            text-align: center;
+            font-size: 14px;
+            color: #746A6A;
+            .image_placeholder {
+                width: 262px;
+                height: 230px;
+                background-color: #EEEEEE;
+                border-radius: 3px;
+                align-content: center;
+                justify-content: center;
+                display: flex;
+                margin-bottom: 11px;
+                img {
+                    width: 180px;
+                    height: 180px;
+                    align-self: center
+                }
+            }
+        }
+    }
+}
