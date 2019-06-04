@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
-    width: 300px;
+    width: 278px;
     font-size: 12px;
     .visitor_actions form,
     a {
@@ -25,6 +25,12 @@
     a {
         color: #363636;
         text-align: right;
+    }
+    input {
+        width: 80px;
+    }
+    input[type="submit"] {
+        width: 124px;
     }
 }
 

@@ -18,11 +18,9 @@ class ProjectsController < ApplicationController
     if @project.save
       logger.info "================= salvou"
       logger.info @project.inspect
-      byebug
     else
       logger.info "================= nao foi"
       logger.info @project.errors.inspect
-      byebug
     end
     redirect_to root_path
   end
