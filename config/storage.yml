@@ -11,7 +11,7 @@ amazon:
   service: S3
   access_key_id: AKIAIF456WKVKMTDDDLQ
   secret_access_key: MH6T4uFI8H6Hbq+dq856RxrczDWqJ9tvu0Yf41Jl
-  region: eu
+  region: sa-east-1
   bucket: catarsinho
 
 # Remember not to checkin your GCS keyfile to a repository
