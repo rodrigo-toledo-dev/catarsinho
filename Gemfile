@@ -73,7 +73,7 @@ gem "haml-rails", "~> 2.0"
 gem 'factory_bot_rails'
 gem 'faker'
 gem 'rails-controller-testing'
-gem "aws-sdk-s3"
+gem 'aws-sdk', '~> 2'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'friendly_id', '~> 5.2.4'
