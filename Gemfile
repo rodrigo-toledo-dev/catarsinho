@@ -74,7 +74,6 @@ gem 'factory_bot_rails'
 gem 'faker'
 gem 'rails-controller-testing'
 gem 'aws-sdk'
-gem "aws-sdk-s3", require: false
 gem "font-awesome-rails"
 gem 'devise'
 gem 'friendly_id', '~> 5.2.4'
