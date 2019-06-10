@@ -90,5 +90,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.secret_key_base = '93ca2e3a5a2d1b9e22e9c244a69e2b5270924f843aed0b47ab7aa5bb851f23bd60b403192d519abed7c80b33983ae9becd778ec82a3b1e68376bc3a8f7a810cf'
   config.active_storage.service = :amazon
 end
