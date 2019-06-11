@@ -3,12 +3,13 @@ test:
   root: <%= Rails.root.join("tmp/storage") %>
 
 local:
-  # service: Disk
-  # root: <%= Rails.root.join("storage") %>
-  service: S3
-  access_key_id: AKIAIJ7DTPBCQ7JHB7MQ
-  secret_access_key: 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
-  region: sa-east-1
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+
+google:
+  service: GCS
+  project: catarsinho
+  credentials: <%= Rails.application.credentials.gcs_todo_pic.to_json %>
   bucket: catarsinho
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
