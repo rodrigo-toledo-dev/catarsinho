@@ -1,5 +1,5 @@
 %div{class: "project project-#{project.slug}"}
-  .image_placeholder=image_tag url_for(project.image)
+  .image_placeholder=image_tag project.image.attachment&.service_url
   .description
     .title
       = project.title
