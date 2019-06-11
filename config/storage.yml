@@ -6,8 +6,8 @@ local:
   # service: Disk
   # root: <%= Rails.root.join("storage") %>
   service: S3
-  access_key_id: AKIAIYBQY3DYIHOXMCGA
-  secret_access_key: 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
+  access_key_id: AKIAIJ7DTPBCQ7JHB7MQ
+  secret_access_key: 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
   region: sa-east-1
   bucket: catarsinho
 
@@ -16,8 +16,8 @@ amazon:
   # service: Disk
   # root: <%= Rails.root.join("storage") %>
   service: S3
-  access_key_id: AKIAIYBQY3DYIHOXMCGA
-  secret_access_key: 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
+  access_key_id: AKIAIJ7DTPBCQ7JHB7MQ
+  secret_access_key: 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
   region: sa-east-1
   bucket: catarsinho
 
