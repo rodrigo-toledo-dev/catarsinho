@@ -9,14 +9,14 @@ class Project < ApplicationRecord
 
 
   def as_json(options = {})
-    { title: self.title, description: self.description, value_to_get: self.value_to_get, slug: self.slug, value_missing: self.value_missing }
+    { title: self.title, description: self.description, value_to_get: self.value_to_get, slug: self.slug, value_missing: self.value_missing, image: Rails.application.routes.url_helpers.rails_blob_url(self.image, only_path: false) }
   end
 
   def value_missing
     begin
-      @value_missing ||= value_to_get - project_items.sum(:value_to_pass)
+      value_to_get - project_items.sum(:value_to_pass)
     rescue => exception
-      @value_missing ||= value_to_get
+      value_to_get
     end
   end
 end

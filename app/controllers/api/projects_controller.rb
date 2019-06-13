@@ -10,7 +10,7 @@ class Api::ProjectsController < Api::ApplicationController
     project_item = project.project_items.build(project_item_params)
     respond_to do |format|
       if project_item.save
-        project.reload!
+        project.reload
         render json: {status: :ok, project: project.as_json}
       else
         render json: {status: :error, errors: project_item.errors.to_json}

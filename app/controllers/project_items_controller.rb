@@ -4,7 +4,8 @@ class ProjectItemsController < ApplicationController
     @project_item = @project.project_items.build(project_item_params)
     respond_to do |format|
       if @project_item.save
-        @project_item.project.touch
+        @project.touch
+        @project.reload
         format.js { render 'create' }
       else
         format.js { render 'error' }
