@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
+  attr_accessor :value_missing
   extend FriendlyId
   friendly_id :title, use: :slugged
   belongs_to :user
@@ -7,12 +8,15 @@ class Project < ApplicationRecord
   validates :title, :image, :description, :value_to_get, presence: true
 
 
+  def as_json(options = {})
+    { title: self.title, description: self.description, value_to_get: self.value_to_get, slug: self.slug, value_missing: self.value_missing }
+  end
 
   def value_missing
     begin
-      value_to_get - project_items.sum(:value_to_pass)
+      @value_missing ||= value_to_get - project_items.sum(:value_to_pass)
     rescue => exception
-      value_to_get
+      @value_missing ||= value_to_get
     end
   end
 end
