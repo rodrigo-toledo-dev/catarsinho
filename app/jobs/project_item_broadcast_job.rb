@@ -1,7 +1,7 @@
 class ProjectItemBroadcastJob < ApplicationJob
   queue_as :default
   def perform(project_item)
-    ActionCable.server.broadcast 'project_channel', project_detail: render_project_detail(project_item.project), content: render_project(project_item), slug: project_item.project.slug
+    ActionCable.server.broadcast 'project_item_channel', project_detail: render_project_detail(project_item.project), content: render_project(project_item), slug: project_item.project.slug
   end
 
   private
