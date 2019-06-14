@@ -1,3 +1,3 @@
-.projects_list
-  -@projects.in_groups_of(4, false).each do |projects|
-    =render partial: 'projects', locals: {projects: projects}
+%ul{class: 'projects_list'}
+  -@projects.each do |project|
+    =render partial: 'project', locals: {project: project}

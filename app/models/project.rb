@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
+  attr_accessor :value_missing
   extend FriendlyId
   friendly_id :title, use: :slugged
   belongs_to :user
@@ -7,6 +8,9 @@ class Project < ApplicationRecord
   validates :title, :image, :description, :value_to_get, presence: true
 
 
+  def as_json(options = {})
+    { title: self.title, description: self.description, value_to_get: self.value_to_get, slug: self.slug, value_missing: self.value_missing, image: Rails.application.routes.url_helpers.rails_blob_url(self.image, only_path: false) }
+  end
 
   def value_missing
     begin

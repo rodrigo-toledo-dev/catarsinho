@@ -1,22 +1,21 @@
-
 .project
-  .image_placeholder=image_tag url_for(@project.image)
+  .image_placeholder=image_tag url_for(project.image)
   .description
     .title
-      = @project.title
+      = project.title
     .project_description
-      = @project.description
+      = project.description
     .user
-      =[Project.human_attribute_name(:user), @project.user.email].join(' - ')
+      =[Project.human_attribute_name(:user), project.user.email].join(' - ')
     .value_to_get
-      =[Project.human_attribute_name(:value_to_get), number_to_currency(@project.value_to_get)].join(' - ')
+      =[Project.human_attribute_name(:value_to_get), number_to_currency(project.value_to_get)].join(' - ')
     .value_missing
-      =[Project.human_attribute_name(:value_missing), number_to_currency(@project.value_missing)].join(' - ')
+      =[Project.human_attribute_name(:value_missing), number_to_currency(project.value_missing)].join(' - ')
   .contribution
     .title=t('.contribution_title')
-    =form_for :project_item, url: project_project_items_path(@project), remote: true do |f|
-      =f.text_field :name, placeholder: ProjectItem.human_attribute_name(:name), value: ''
-      =f.text_field :email, placeholder: ProjectItem.human_attribute_name(:email), value: ''
-      =f.number_field :value_to_pass, placeholder: ProjectItem.human_attribute_name(:value_to_pass), value: ''
+    =form_for :project_item, url: project_project_items_path(project), remote: true do |f|
+      =f.text_field :name, placeholder: ProjectItem.human_attribute_name(:name), value: Faker::Name.name
+      =f.text_field :email, placeholder: ProjectItem.human_attribute_name(:email), value: Faker::Internet.email
+      =f.number_field :value_to_pass, placeholder: ProjectItem.human_attribute_name(:value_to_pass), value: Faker::Number.within(10..20)
       = f.submit t('.contribute_to')
 

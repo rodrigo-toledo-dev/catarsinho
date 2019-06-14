@@ -1,13 +1,2 @@
-%div{class: "project project-#{project.slug}"}
-  .image_placeholder=image_tag url_for(project.image)
-  .description
-    .title
-      = project.title
-    .value_to_get
-      =t('.value_to_get')
-      = number_to_currency project.value_to_get
-    .value_missing
-      =t('.value_missing')
-      = number_to_currency project.value_missing
-  -if current_user.try(:id) != project.user_id
-    =link_to t('.project_details'), project, remote: true, class: 'project_details'
+%li{class: "project project-#{project.slug}"}
+  =render partial: 'home/project_detail', locals: {project: project}

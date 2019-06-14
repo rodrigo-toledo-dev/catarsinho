@@ -1,7 +1,7 @@
 ---
 pt-BR:
   home:
-    project:
+    project_detail:
       value_to_get: Valor a arrecadar
       value_missing: Ainda falta(am)!
       project_details: Quero ajudar este projeto
