@@ -1,4 +1,4 @@
 $('#project_detail').show();
-$('#project_detail').html("<%= j render(:partial => 'projects/show') %>");
+$('#project_detail').html("<%= j render(partial: 'projects/show', locals: {project: @project}) %>");
 var projectDetail = document.documentElement;
 projectDetail.scrollIntoView();

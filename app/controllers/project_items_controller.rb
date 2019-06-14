@@ -1,12 +1,11 @@
 class ProjectItemsController < ApplicationController
   def create
-    @project = Project.friendly.find(params[:project_id])
-    @project_item = @project.project_items.build(project_item_params)
+    project = Project.friendly.find(params[:project_id])
+    project_item = project.project_items.build(project_item_params)
     respond_to do |format|
-      if @project_item.save
-        @project.touch
-        @project.reload
-        format.js { render 'create' }
+      if project_item.save
+        project.touch
+        format.js { head :ok }
       else
         format.js { render 'error' }
       end

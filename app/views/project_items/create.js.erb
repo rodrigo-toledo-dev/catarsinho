@@ -1,6 +1,0 @@
-alert("<%= t('project_item_valid') %>");
-$('#project_detail').html("<%= j render(partial: 'projects/show') %>");
-var currentProjectId = "li.project-<%=@project.slug%>";
-$(currentProjectId).html("<%= j render partial: 'home/project_detail', locals: {project: @project} %>")
-var projectDetail = document.documentElement;
-projectDetail.scrollIntoView();

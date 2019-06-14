@@ -8,5 +8,4 @@
   .value_missing
     =t('.value_missing')
     = number_to_currency project.value_missing
--if current_user.try(:id) != project.user_id
-  =link_to t('.project_details'), project, remote: true, class: 'project_details'
+  = link_to t('.project_details'), project, remote: true, class: 'project_details'
