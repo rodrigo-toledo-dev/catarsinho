@@ -11,9 +11,10 @@ require 'json'
 images_file = JSON.parse(File.read(Rails.root.join('db','initial_assets','images.json')))
 User.all.each do |user|
   12.times.each do
-    project = user.projects.build(title: Faker::App.name, description: Faker::Lorem.paragraph, value_to_get: Faker::Number.between(200, 500))
-    project.save!
+    Project.skip_callback(:create, :after, :perform_real_time, raise: false)
     image = images_file.sample
+    project = user.projects.build(title: Faker::App.name, description: Faker::Lorem.paragraph, value_to_get: Faker::Number.between(200, 500))
     project.image.attach(io: File.open(Rails.root.join('db','initial_assets', image['image'])), filename: image['image'])
+    project.save!
   end
 end

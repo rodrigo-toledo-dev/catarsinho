@@ -6,7 +6,7 @@ class Project < ApplicationRecord
   has_one_attached :image
   has_many :project_items
   validates :title, :image, :description, :value_to_get, presence: true
-  after_create_commit { ProjectBroadcastJob.perform_later self }
+  after_create_commit :perform_real_time
 
 
   def as_json(options = {})
@@ -19,5 +19,9 @@ class Project < ApplicationRecord
     rescue => exception
       value_to_get
     end
+  end
+
+  def perform_real_time
+    ProjectBroadcastJob.perform_later self
   end
 end
