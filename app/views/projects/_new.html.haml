@@ -14,9 +14,9 @@
   .contribution
     .title=t('.new_project_title')
     =form_for @project, url: projects_path do |f|
-      =f.text_field :title, placeholder: Project.human_attribute_name(:title), value: 'Novo Projeto', required: true
+      =f.text_field :title, placeholder: Project.human_attribute_name(:title), value: '', required: true
       =f.file_field :image, placeholder: Project.human_attribute_name(:image), required: true
-      =f.text_area :description, placeholder: Project.human_attribute_name(:description), value: 'Descricao', required: true
-      =f.number_field :value_to_get, placeholder: Project.human_attribute_name(:value_to_get), value: 500, required: true
+      =f.text_area :description, placeholder: Project.human_attribute_name(:description), value: '', required: true
+      =f.number_field :value_to_get, placeholder: Project.human_attribute_name(:value_to_get), value: '', required: true
       = f.submit t('.save_project')
 
