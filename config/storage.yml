@@ -9,5 +9,5 @@ local:
 google:
   service: GCS
   project: catarsinho
-  credentials: ENV['GOOGLE_APPLICATION_CREDENTIALS']
+  credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'] %>
   bucket: catarsinho
