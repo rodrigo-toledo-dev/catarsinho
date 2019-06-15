@@ -15,13 +15,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = current_user.projects.build(project_params)
-    if @project.save
-      logger.info "================= salvou"
-      logger.info @project.inspect
-    else
-      logger.info "================= nao foi"
-      logger.info @project.errors.inspect
-    end
+    @project.save
     redirect_to root_path
   end
 
